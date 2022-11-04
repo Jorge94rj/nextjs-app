@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const SideProps = ({ test }) => {
@@ -22,6 +23,8 @@ const SideProps = ({ test }) => {
         The code you write inside <strong>getServerSide</strong> props won&apos;t even be included in the JS
         bundle that is sent to the browser
       </p>
+      <h3>Get item by using dynamic params</h3>
+      <Link href='/data-page/side-props/4' style={{color: '#0099cc'}}>Id=4</Link>
       <h4>Example</h4>
       <p><code>getServerSideProps</code> function calls the endpoint <code>https://jsonplaceholder.typicode.com/todos</code></p>
       <p>
@@ -39,9 +42,9 @@ const SideProps = ({ test }) => {
 export default SideProps
 
 export async function getServerSideProps() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+  const request = 'https://jsonplaceholder.typicode.com/todos';
+  const response = await fetch(request)
   const data = await response.json()
-  console.log('data->', data)
   return {
     props: {
       test: data

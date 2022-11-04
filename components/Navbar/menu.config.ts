@@ -47,16 +47,26 @@ export const menu: IMenuItem[] = [
       },
       {
         name: 'Display events',
-        link: '/data-page'
+        link: '/data-page/events'
       },
       {
         name: 'Static paths',
-        link: '/data-page'
+        link: '/data-page/static-path'
       },
     ]
   },
   {
-    name: 'Backend'
+    name: 'Backend',
+    subMenu: [
+      {
+        name: 'CMS setup',
+        link: '/backend-page/cms-setup'
+      },
+      {
+        name: 'Event content type',
+        link: '/backend-page/event-content-type'
+      },
+    ]
   },
   {
     name: 'Events'
