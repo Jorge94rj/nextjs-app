@@ -26,7 +26,6 @@ function create(req, res) {
     id,
     name: JSON.parse(req.body).name
   }
-  console.log('inserting...', item)
   data.push(item);
   res.status(200).json(item)
 }
