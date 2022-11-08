@@ -69,13 +69,21 @@ export const menu: IMenuItem[] = [
     ]
   },
   {
-    name: 'Events'
+    name: 'Events',
+    subMenu: [
+      {
+        name: 'Search page',
+        link: '/events-page/search-page'
+      },
+    ]
   },
   {
-    name: 'Authentication'
+    name: 'Authentication',
+    link: '/authentication-page/jwt'
   },
   {
-    name: 'Authorization'
+    name: 'Authorization',
+    link: '/authorization-page'
   },
   {
     name: 'Troubleshooting',
