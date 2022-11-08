@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { TextLeft } from './index.style'
-import Navbar from '../components/Navbar'
+import { TextLeft } from '../styles/index.style'
 
 export default function Home() {
   return (
