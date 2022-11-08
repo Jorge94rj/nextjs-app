@@ -7,8 +7,6 @@ const CMSPage = (props) => {
 
   const { fields } = props;
 
-  console.log('fields->', fields)
-
   return (
     <>
       <h1>Data fetched from Contentful</h1>
@@ -61,7 +59,6 @@ export async function getStaticProps() {
   let data = entries.filter((item) =>
     item.sys.contentType.sys.id === 'movie'
   )
-  console.log('DATA->', data)
   const fields = data.map((item) => ({
     title: item.fields.title.content[0].content[0].value,
     image: item.fields.image.fields.file.url
